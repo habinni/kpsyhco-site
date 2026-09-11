@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 420" width="320" height="420">
+  <defs><style>.l{fill:none;stroke:#3F5E4C;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}</style></defs>
+  <!-- 구름 -->
+  <g fill="#fff" stroke="#DDE6D3" stroke-width="2">
+    <path d="M20 190c0-10 10-16 18-12 4-10 22-10 26 0 10-4 18 4 16 12z"/>
+    <path d="M250 60c0-8 8-13 15-10 3-8 18-8 21 0 8-3 15 3 13 10z"/>
+    <path d="M40 330c0-8 8-13 15-10 3-8 18-8 21 0 8-3 15 3 13 10z"/>
+  </g>
+  <!-- 작은 열기구들 -->
+  <g class="l" fill="#F3F7EC">
+    <ellipse cx="60" cy="230" rx="18" ry="22"/><path d="M52 250l4 14h8l4-14"/><rect x="55" y="264" width="10" height="8"/>
+    <ellipse cx="270" cy="330" rx="14" ry="18"/><path d="M264 346l3 11h6l3-11"/><rect x="266" y="357" width="8" height="6"/>
+  </g>
+  <!-- 큰 열기구 -->
+  <ellipse cx="160" cy="150" rx="88" ry="105" fill="#BFE1A8" class="l"/>
+  <path d="M160 45v210M108 68c-24 40-24 120 0 164M212 68c24 40 24 120 0 164M84 150h152" class="l"/>
+  <path d="M100 255c20 20 100 20 120 0" fill="#A8D48C" class="l"/>
+  <path d="M130 258l-16 70M190 258l16 70M148 262l-6 66M172 262l6 66" class="l"/>
+  <rect x="112" y="328" width="96" height="60" rx="6" fill="#fff" class="l"/>
+  <path d="M112 350h96M112 368h96" class="l"/>
+  <!-- 사람 둘 -->
+  <circle cx="148" cy="312" r="9" fill="#F4B4A8" class="l"/><path d="M136 328c0-8 24-8 24 0" fill="#F4B4A8" class="l"/>
+  <circle cx="172" cy="314" r="8" fill="#BFE1A8" class="l"/><path d="M162 328c0-7 20-7 20 0" fill="#BFE1A8" class="l"/>
+</svg>

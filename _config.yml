@@ -1,0 +1,15 @@
+title: 한국심리건강진흥원
+lang: ko
+collections:
+  notices:
+    output: true
+    permalink: /notice/:path/
+defaults:
+  - scope:
+      path: ""
+      type: notices
+    values:
+      layout: notice
+exclude:
+  - build.py
+  - README.md

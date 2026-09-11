@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120" width="360" height="120">
+  <path d="M14 26h54a24 24 0 010 48H14z" fill="#2E4A6B"/>
+  <path d="M14 26l34 12v60l-34-8z" fill="#3F9E9A"/>
+  <circle cx="42" cy="66" r="3" fill="#2E4A6B"/>
+  <text x="200" y="46" text-anchor="middle" font-family="Pretendard Variable,Pretendard,sans-serif" font-weight="800" font-size="30" fill="#2E4A6B">플리마인드</text>
+  <text x="200" y="84" text-anchor="middle" font-family="Pretendard Variable,Pretendard,sans-serif" font-weight="800" font-size="30" fill="#2E4A6B">심리건강연구소</text>
+  <text x="200" y="108" text-anchor="middle" font-family="Pretendard Variable,Pretendard,sans-serif" font-size="14" letter-spacing="3" fill="#3F9E9A">play in your mind</text>
+</svg>

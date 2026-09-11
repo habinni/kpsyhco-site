@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 500" width="600" height="500">
+  <defs><style>
+    .ln{fill:none;stroke:#3F5E4C;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+    .lnt{fill:none;stroke:#3F5E4C;stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+  </style></defs>
+  <rect width="600" height="500" fill="#F3F7EC"/>
+  <!-- 배경 언덕 -->
+  <ellipse cx="300" cy="470" rx="320" ry="60" fill="#DCEBC4"/>
+  <ellipse cx="130" cy="440" rx="110" ry="34" fill="#C6E3A6"/>
+  <ellipse cx="470" cy="450" rx="120" ry="34" fill="#C6E3A6"/>
+  <!-- 지붕 -->
+  <path d="M150 230 L300 90 L450 230" fill="none" stroke="#F4B4A8" stroke-width="30" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 230 L300 90 L450 230" class="ln"/>
+  <path d="M190 230 L300 128 L410 230" class="lnt"/>
+  <path d="M170 244 V330 M430 244 V330" class="lnt"/>
+  <!-- 큰 식물 -->
+  <path d="M180 420 C170 350 210 320 230 370 C240 320 290 340 270 420Z" fill="#8FB43F"/>
+  <path d="M232 420 C226 380 214 360 196 350" class="lnt"/>
+  <!-- 사람들 -->
+  <circle cx="312" cy="215" r="34" fill="#fff" class="ln"/>
+  <path d="M284 203 C295 181 330 181 346 209" class="lnt"/>
+  <path d="M300 221 q4 4 8 0 M324 221 q4 4 8 0" class="lnt"/>
+  <circle cx="298" cy="231" r="5" fill="#F4B4A8"/><circle cx="328" cy="231" r="5" fill="#F4B4A8"/>
+  <path d="M258 430 C254 320 372 320 368 430" fill="#fff" class="ln"/>
+  <circle cx="376" cy="278" r="30" fill="#fff" class="ln"/>
+  <path d="M350 268 C362 248 392 248 404 270" class="lnt"/>
+  <path d="M366 284 q3 3 6 0 M386 284 q3 3 6 0" class="lnt"/>
+  <circle cx="362" cy="292" r="4" fill="#F4B4A8"/><circle cx="390" cy="292" r="4" fill="#F4B4A8"/>
+  <path d="M334 436 C332 360 420 360 418 436" fill="#fff" class="ln"/>
+  <circle cx="246" cy="312" r="26" fill="#fff" class="ln"/>
+  <path d="M224 304 C234 288 260 288 268 304" class="lnt"/>
+  <path d="M238 318 q3 3 6 0 M254 318 q3 3 6 0" class="lnt"/>
+  <circle cx="234" cy="324" r="4" fill="#F4B4A8"/><circle cx="258" cy="324" r="4" fill="#F4B4A8"/>
+  <path d="M214 436 C210 368 282 368 278 436" fill="#fff" class="ln"/>
+  <!-- 화분 -->
+  <path d="M74 330 H126 L118 396 H82Z" fill="#fff" class="lnt"/>
+  <path d="M68 330 H132" class="lnt"/>
+  <path d="M100 328 V284" class="lnt"/>
+  <path d="M100 298 C82 298 74 284 78 270 C92 272 100 282 100 298Z" fill="#8FB43F"/>
+  <path d="M100 290 C118 290 126 276 122 262 C108 264 100 274 100 290Z" fill="#8FB43F"/>
+  <!-- 하트 -->
+  <path d="M470 350 C470 328 500 323 508 344 C516 323 546 328 546 350 C546 374 508 398 508 398 C508 398 470 374 470 350Z" fill="#F4A7A0"/>
+  <path d="M60 170 C60 160 73 158 77 167 C81 158 94 160 94 170 C94 181 77 192 77 192 C77 192 60 181 60 170Z" fill="#F4A7A0"/>
+  <!-- 말풍선 -->
+  <rect x="440" y="110" width="110" height="74" rx="10" fill="#fff" class="lnt"/>
+  <path d="M470 184 L462 202 L490 184" fill="#fff" class="lnt"/>
+  <path d="M462 134 H528 M462 150 H528 M462 166 H504" class="lnt"/>
+  <!-- 장식 사각 -->
+  <rect x="520" y="240" width="20" height="20" fill="#C6E3A6"/>
+  <rect x="548" y="268" width="14" height="14" fill="#F4B4A8"/>
+  <rect x="56" y="230" width="14" height="14" fill="#8FB43F"/>
+</svg>

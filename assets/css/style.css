@@ -1,0 +1,577 @@
+/* ============================================================
+   한국심리건강진흥원 — 원본(Wix) 디자인 재현
+   흰 헤더 / 올리브그린 메뉴바 / 머스터드 안내 띠 / 회색 푸터
+   ============================================================ */
+
+@font-face{
+  font-family:"KBIZHanmaumGothic";
+  src:url("/assets/fonts/KBIZHanmaumGothic.woff") format("woff");
+  font-weight:normal;font-style:normal;font-display:swap;
+}
+@font-face{
+  font-family:"GyeonggiTitleM";
+  src:url("/assets/fonts/GyeonggiTitleM.woff") format("woff");
+  font-weight:normal;font-style:normal;font-display:swap;
+}
+:root{
+  --white:#FFFFFF;
+  --olive:#8FB43F;
+  --olive-deep:#7A9C33;
+  --olive-pale:#F3F7EC;
+  --mustard:#E8B84C;
+  --mustard-deep:#D4A53A;
+  --grey:#8C8C8C;
+  --grey-deep:#6F6F6F;
+  --ink:#333333;
+  --muted:#6B6B6B;
+  --hairline:#E6E6E6;
+  --max:1100px;
+  --sans:"NanumBarunpen","Nanum Barunpen","Nanum Gothic",-apple-system,system-ui,"Malgun Gothic",sans-serif;
+  --round:"GyeonggiTitleM","NanumBarunpen","Nanum Gothic",-apple-system,system-ui,"Malgun Gothic",sans-serif;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--white);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3,h4{font-family:var(--round);font-weight:normal;line-height:1.35;margin:0 0 .6em;color:var(--ink);}
+p{margin:0 0 1.1em;max-width:70ch;}
+ul{margin:0 0 1.1em;padding-left:1.3em;}
+li{margin-bottom:.4em;}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 24px;}
+
+.skip-link{position:absolute;left:-9999px;top:0;background:var(--olive);color:#fff;padding:10px 16px;z-index:200;}
+.skip-link:focus{left:0;}
+
+/* ---------- header ---------- */
+.site-header{background:var(--white);}
+.site-header .wrap{display:flex;flex-direction:column;align-items:center;padding:26px 24px 20px;position:relative;}
+.brand{display:flex;align-items:center;gap:14px;font-family:"KBIZHanmaumGothic",var(--round);font-size:clamp(26px,4vw,38px);font-weight:700;color:var(--ink);letter-spacing:-.01em;}
+.brand img{width:auto;height:70px;}
+.nav-toggle{display:none;position:absolute;right:24px;top:36px;background:var(--olive);border:none;border-radius:6px;color:#fff;padding:8px 14px;font-size:15px;cursor:pointer;}
+
+/* ---------- 메뉴바 ---------- */
+.main-nav{background:var(--olive);}
+.main-nav > ul{list-style:none;display:flex;justify-content:center;gap:8px;margin:0 auto;padding:0;max-width:var(--max);}
+.main-nav > ul > li{position:relative;margin:0;}
+.main-nav > ul > li > a{display:block;padding:18px 22px;font-family:var(--round);font-size:16px;color:var(--white);font-weight:normal;transition:background .15s ease;}
+.main-nav > ul > li > a:hover,.main-nav > ul > li > a:focus{background:var(--olive-deep);}
+.main-nav > ul > li.active > a{background:var(--olive-deep);}
+.main-nav .submenu{list-style:none;margin:0;padding:8px 0;position:absolute;left:0;top:100%;min-width:190px;background:var(--olive-deep);display:none;z-index:50;box-shadow:0 8px 20px rgba(0,0,0,.15);}
+.main-nav li:hover > .submenu,.main-nav li:focus-within > .submenu{display:block;}
+.main-nav .submenu li{margin:0;}
+.main-nav .submenu li a{display:block;padding:9px 18px;font-size:14px;color:#fff;}
+.main-nav .submenu li a:hover{background:var(--olive);}
+
+/* ---------- 서브 내비 ---------- */
+.subnav{background:var(--olive-pale);border-bottom:1px solid var(--hairline);}
+.subnav .wrap{padding-top:14px;padding-bottom:14px;}
+.crumb{font-size:13px;color:var(--muted);margin-bottom:10px;}
+.crumb a{color:var(--olive-deep);font-weight:600;}
+.sib-list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px;}
+.sib-list li{margin:0;}
+.sib-list a{display:inline-block;padding:6px 13px;font-family:var(--sans);font-size:13.5px;font-weight:700;border-radius:999px;border:1px solid var(--hairline);background:var(--white);color:var(--ink);}
+.sib-list a:hover{border-color:var(--olive);color:var(--olive-deep);}
+.sib-list li.active a{background:var(--olive);border-color:var(--olive);color:#fff;font-weight:600;}
+
+/* ---------- 홈 배너 ---------- */
+.hero{background:var(--olive-pale);}
+.hero .wrap{padding:0;}
+.hero img{width:100%;height:auto;max-height:600px;object-fit:contain;margin:0 auto;}
+
+/* ---------- 머스터드 4칸 띠 ---------- */
+.feature-band{background:var(--mustard);}
+.feature-band .wrap{display:grid;grid-template-columns:repeat(4,1fr);padding:0;}
+.feature{padding:30px 16px 26px;text-align:center;color:var(--ink);border-right:1px solid rgba(255,255,255,.55);}
+.feature:last-child{border-right:none;}
+.feature .icon{width:52px;height:52px;border-radius:50%;background:#2C2C2C;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;}
+.feature .icon img{width:28px;height:28px;}
+.feature h3{font-family:var(--round);font-size:22px;font-weight:normal;margin:0 0 10px;}
+.feature a.more{font-size:14px;color:#fff;letter-spacing:.06em;}
+.feature a.more:hover{text-decoration:underline;}
+
+/* ---------- 서브페이지 타이틀 ---------- */
+.page-hero{padding:38px 24px 26px;border-bottom:2px solid var(--olive-pale);}
+.page-hero h1{font-size:clamp(24px,3vw,32px);color:var(--olive-deep);}
+main{padding:44px 0 80px;}
+main.home{padding:0;}
+.prose h2{margin-top:2em;font-size:21px;color:var(--olive-deep);}
+.prose h3{margin-top:1.6em;font-size:17.5px;}
+.prose{max-width:74ch;}
+hr.rule{border:none;border-top:1px solid var(--hairline);margin:2.2em 0;}
+.two-col{display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:start;}
+.figure{border-radius:10px;overflow:hidden;}
+.figure figcaption{font-size:13px;color:var(--muted);padding:8px 0;}
+
+/* ---------- 설립목적 ---------- */
+.purpose-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:16px;margin:32px 0;}
+.purpose-item{background:var(--olive-pale);border-radius:10px;padding:22px 20px;display:flex;flex-direction:column;gap:12px;}
+.purpose-item img{width:34px;height:34px;}
+.purpose-item p{margin:0;font-size:14.5px;color:var(--ink);font-weight:500;line-height:1.55;}
+
+/* ---------- 카드(주요사업) ---------- */
+.card-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px;margin:32px 0;}
+.card{background:var(--white);border:1px solid var(--hairline);border-left:5px solid var(--olive);border-radius:8px;padding:20px 22px;}
+.card h3{font-size:16px;margin:0;font-weight:600;}
+
+/* ---------- 자격검정 목록 ---------- */
+.cert-list{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:22px;margin:36px 0;}
+.cert-list a{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px;padding:22px 12px;border-radius:12px;transition:background .15s ease,transform .15s ease;}
+.cert-list a:hover{background:var(--olive-pale);transform:translateY(-3px);}
+.cert-list .icon-wrap{width:110px;height:110px;display:flex;align-items:center;justify-content:center;}
+.cert-list .icon-wrap img{width:96px;height:96px;object-fit:contain;}
+.cert-list h3{font-size:15.5px;margin:0;font-weight:normal;}
+
+/* ---------- 자격검정 상세 ---------- */
+.cert-code{display:inline-block;background:var(--olive-pale);border-radius:999px;padding:4px 14px;font-size:13px;color:var(--olive-deep);font-weight:600;margin-top:8px;}
+.level-block{border:1px solid var(--hairline);border-radius:10px;padding:24px 26px;margin:0 0 20px;background:var(--white);}
+.level-block h3{font-size:15px;margin-bottom:.8em;display:inline-block;background:var(--mustard);color:var(--ink);padding:4px 16px;border-radius:999px;}
+.level-block dl{margin:0;}
+.level-block dt{font-weight:700;font-size:14px;margin-top:.9em;}
+.level-block dd{margin:.25em 0 0;color:var(--muted);font-size:14.5px;}
+
+/* ---------- 연혁 ---------- */
+.timeline{border-left:2px solid var(--hairline);margin-left:6px;padding-left:28px;}
+.timeline .year{position:relative;padding-bottom:30px;}
+.timeline .year:last-child{padding-bottom:0;}
+.timeline .year::before{content:"";position:absolute;left:-36px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--olive);border:3px solid #fff;box-shadow:0 0 0 2px var(--olive-pale);}
+.timeline .year h3{font-weight:normal;color:var(--olive-deep);font-size:18px;margin-bottom:.3em;}
+
+/* ---------- 조직 ---------- */
+.org-chart{display:flex;flex-direction:column;align-items:center;gap:10px;margin:28px 0 40px;}
+.org-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;}
+.org-node{border:1px solid var(--hairline);background:#fff;border-radius:8px;padding:12px 18px;font-size:14px;text-align:center;}
+.org-node.top{background:var(--olive);color:#fff;font-weight:700;border-color:var(--olive);}
+.org-node.partner{font-size:13px;color:var(--muted);background:var(--olive-pale);border-color:var(--olive-pale);}
+.org-connector{width:2px;height:16px;background:var(--hairline);}
+.org-images{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;margin-top:40px;}
+.org-images h2{font-size:20px;color:var(--olive-deep);}
+
+/* ---------- 오시는 길 ---------- */
+.loc-card{border:1px solid var(--hairline);border-radius:10px;padding:28px;margin-bottom:24px;background:#fff;}
+.loc-card h2{font-size:19px;margin-bottom:.4em;color:var(--olive-deep);}
+.loc-meta{font-size:14.5px;color:var(--muted);margin-bottom:1.2em;}
+.loc-meta strong{color:var(--ink);}
+.loc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+.loc-grid h4{font-size:13.5px;color:var(--olive-deep);margin-bottom:.4em;font-weight:700;}
+.loc-grid p{font-size:14px;color:var(--muted);margin:0;}
+
+/* ---------- 협력기관 ---------- */
+.partner{display:grid;grid-template-columns:230px 1fr;gap:30px;padding:30px 0;border-bottom:1px solid var(--hairline);align-items:start;}
+.partner:last-child{border-bottom:none;}
+.partner .logo{border:1px solid var(--hairline);border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:center;height:90px;padding:14px;}
+.partner .logo img{max-height:60px;width:auto;object-fit:contain;}
+.partner h3{font-size:16.5px;margin-bottom:.4em;}
+.partner p{font-size:14.5px;color:var(--muted);}
+.partner a.more{font-size:13.5px;color:var(--olive-deep);font-weight:700;}
+
+.notice-box{border:1px dashed var(--hairline);border-radius:10px;padding:44px;text-align:center;background:var(--olive-pale);color:var(--muted);}
+
+/* ---------- 푸터 ---------- */
+.site-footer{background:var(--grey);color:#fff;}
+.site-footer .wrap{padding:26px 24px 28px;text-align:center;}
+.footer-links{list-style:none;display:flex;justify-content:center;gap:40px;padding:0;margin:0 0 18px;flex-wrap:wrap;}
+.footer-links li{margin:0;}
+.footer-links a{font-size:13.5px;color:#fff;}
+.footer-links a:hover{text-decoration:underline;}
+.footer-meta{font-size:13.5px;line-height:1.9;max-width:none;margin:0;}
+.footer-meta strong{font-weight:500;}
+.footer-credit{font-size:12.5px;margin-top:6px;opacity:.85;}
+
+/* ---------- 반응형 ---------- */
+@media (max-width:860px){
+  .brand{font-size:24px;gap:10px;}
+  .brand img{height:52px;}
+  .nav-toggle{display:inline-block;top:30px;}
+  .main-nav > ul{display:none;flex-direction:column;}
+  .main-nav.open > ul{display:flex;}
+  .main-nav > ul > li > a{padding:14px 24px;}
+  .main-nav .submenu{position:static;display:block;box-shadow:none;padding:0 0 4px 24px;}
+  .feature-band .wrap{grid-template-columns:repeat(2,1fr);}
+  .feature:nth-child(2){border-right:none;}
+  .feature:nth-child(1),.feature:nth-child(2){border-bottom:1px solid rgba(255,255,255,.55);}
+  .two-col{grid-template-columns:1fr;}
+  .partner{grid-template-columns:1fr;}
+}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}*{transition:none !important;}}
+
+/* ---------- 이름 카드 (진흥원소개) ---------- */
+.name-card{background:var(--olive-pale);border-radius:12px;padding:30px 24px;text-align:center;}
+.name-card img{width:52px;margin:0 auto 14px;}
+.name-card-title{font-size:18px;font-weight:700;line-height:1.5;margin:0 0 12px;max-width:none;}
+.name-card a{color:var(--olive-deep);font-weight:700;font-size:14px;}
+/* 협력기관 텍스트 타일 */
+.partner .logo span{font-weight:700;font-size:14.5px;color:var(--olive-deep);text-align:center;line-height:1.4;}
+.partner .logo{background:var(--olive-pale);border-color:var(--olive-pale);}
+
+/* ---------- 설립목적: 배너 + 열기구 + 버블 맵 ---------- */
+.purpose-banner{background:#DDEBC9;border-radius:32px;padding:28px 32px 26px;text-align:center;margin:8px 0 36px;}
+.purpose-banner h1{font-size:24px;font-weight:600;color:var(--ink);margin-bottom:14px;}
+.purpose-banner p{margin:0 auto;max-width:none;font-size:15.5px;color:var(--ink);line-height:1.8;}
+.purpose-scene{display:grid;grid-template-columns:300px 1fr;gap:20px;align-items:center;}
+.balloon img{width:100%;max-width:300px;}
+.bubble-map{position:relative;width:660px;height:440px;margin:0 auto;}
+.bubble-map .links{position:absolute;inset:0;width:100%;height:100%;stroke:#C9DBB6;stroke-width:2;}
+.bubble{position:absolute;width:118px;height:118px;border-radius:50%;transform:translate(-50%,-50%);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  color:#fff;padding:10px;gap:6px;box-shadow:0 4px 12px rgba(0,0,0,.06);}
+.bubble img{width:24px;height:24px;}
+.bubble p{font-family:var(--round);margin:0;font-size:11px;line-height:1.35;font-weight:normal;max-width:none;}
+.bubble.g1{background:#B7D89B;}
+.bubble.g2{background:#A8CF8D;}
+.bubble.y{background:#D9C46B;}
+.bubble.o{background:#BFC77A;}
+.bubble.b{background:#9DC9D6;}
+.purpose-fallback{display:none;}
+@media (max-width:1000px){
+  .purpose-scene{grid-template-columns:1fr;}
+  .balloon{display:none;}
+  .bubble-map{transform-origin:top left;}
+}
+@media (max-width:720px){
+  .bubble-map{display:none;}
+  .purpose-fallback{display:block;list-style:none;padding:0;margin:0;display:grid;gap:10px;}
+  .purpose-fallback li{background:var(--olive-pale);border-radius:10px;padding:14px 16px;font-size:14.5px;font-weight:500;margin:0;}
+}
+
+/* ---------- 이사장 프로필 ---------- */
+main.flush{padding:0 0 60px;}
+.profile-wrap{background:#F2F2F2;padding:40px 0 60px;}
+.profile-tabs{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-bottom:40px;}
+.profile-tabs a{font-family:var(--round);background:#fff;text-align:center;padding:22px 16px;font-size:20px;font-weight:normal;letter-spacing:.12em;color:var(--ink);}
+.profile-tabs a.active{color:var(--ink);box-shadow:inset 0 -4px 0 var(--olive);}
+.profile-tabs a:hover{color:var(--olive-deep);}
+.profile-body h1{font-size:clamp(28px,4vw,42px);color:#7A9C33;font-weight:normal;margin:0 0 30px;}
+.profile-sec h3{font-size:19px;font-weight:500;margin:0 0 14px;display:flex;align-items:center;gap:14px;color:var(--ink);}
+.profile-sec h3::before{content:"";width:12px;height:12px;border-radius:50%;border:2px solid #C6DE9A;background:#EAF3D8;flex:none;}
+.profile-sec ul{list-style:none;padding:0;margin:0;}
+.profile-sec li{position:relative;padding-left:38px;margin:0 0 10px;font-size:16.5px;line-height:1.7;color:#333;}
+.profile-sec li::before{content:">";position:absolute;left:8px;top:0;color:#A5C46A;font-weight:700;}
+hr.dashed{border:none;border-top:1.5px dashed #555;margin:36px 0 40px;}
+@media (max-width:720px){
+  .profile-tabs{grid-template-columns:1fr;gap:12px;}
+  .profile-tabs a{font-size:17px;padding:16px;}
+}
+
+/* ---------- 조직도 (재정비) ---------- */
+.org{display:flex;flex-direction:column;align-items:center;margin:16px 0 48px;}
+.org .org-node{box-shadow:none;padding:0 22px;height:56px;display:flex;align-items:center;justify-content:center;font-size:15px;border-radius:10px;line-height:1.35;text-align:center;}
+.org .org-node.top{min-width:130px;font-size:16px;}
+.org .org-node.top.wide{min-width:260px;}
+.org .org-node.partner{height:auto;min-height:56px;padding:10px 12px;font-size:13.5px;}
+.org-v{width:2px;height:26px;background:#D5D5D5;}
+.org-three{position:relative;display:flex;gap:16px;padding-top:16px;}
+.org-three .org-h{position:absolute;top:0;left:60px;right:60px;height:2px;background:#D5D5D5;}
+.org-three .org-node::before{content:"";position:absolute;top:-16px;left:50%;width:2px;height:16px;background:#D5D5D5;}
+.org-three .org-node{position:relative;min-width:110px;}
+.org-label{font-size:14px;color:var(--muted);margin:2px 0 14px;}
+.org-partners{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;width:100%;max-width:960px;}
+@media (max-width:860px){
+  .org-partners{grid-template-columns:repeat(2,1fr);}
+  .org-three{flex-wrap:wrap;justify-content:center;}
+  .org-three .org-h{display:none;}
+  .org-three .org-node::before{display:none;}
+}
+
+/* ---------- 조직도 (원본 색상 버전) ---------- */
+.orgc{display:flex;flex-direction:column;align-items:center;margin:20px 0 56px;}
+.orgc-node{font-family:var(--round);padding:12px 34px;border-radius:12px;font-size:19px;font-weight:normal;color:#fff;text-align:center;}
+.orgc-node.mustard{background:#EFC46A;min-width:170px;}
+.orgc-node.green{background:#B9CF8A;min-width:130px;}
+.orgc-node.salmon{background:#E8AE94;}
+.orgc-v{width:2px;height:24px;background:#444;}
+.orgc-three{position:relative;display:flex;gap:70px;padding-top:24px;}
+.orgc-three .orgc-h,.orgc-partners .orgc-h{position:absolute;top:0;left:0;right:0;height:2px;background:#444;}
+.orgc-three .orgc-node{position:relative;}
+.orgc-three .orgc-node::before,.orgc-bar::before{content:"";position:absolute;top:-24px;left:50%;width:2px;height:24px;background:#444;}
+.orgc-three .orgc-h{left:65px;right:65px;}
+.orgc-partners{position:relative;display:grid;grid-template-columns:repeat(10,1fr);gap:8px;padding-top:24px;width:100%;max-width:560px;}
+.orgc-partners .orgc-h{left:5%;right:5%;}
+.orgc-bar{position:relative;background:#EFC46A;border-radius:6px;height:230px;display:flex;align-items:flex-start;justify-content:center;padding-top:14px;}
+.orgc-bar span{writing-mode:vertical-rl;text-orientation:upright;color:#fff;font-weight:700;font-size:14px;letter-spacing:.06em;line-height:1.1;}
+.org-tables{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:20px;}
+.dot-title{font-size:17px;font-weight:500;display:flex;align-items:center;gap:12px;margin-bottom:22px;}
+.dot-title::before{content:"";width:12px;height:12px;border-radius:50%;border:2px solid #C6DE9A;background:#EAF3D8;}
+.org-table{width:100%;border-collapse:collapse;font-size:13.5px;}
+.org-table th,.org-table td{border:1px solid #CFCFCF;padding:8px 10px;text-align:center;}
+.org-table th{background:#F5F5F5;font-weight:600;}
+@media (max-width:860px){
+  .orgc-three{gap:20px;}
+  .orgc-three .orgc-h{left:40px;right:40px;}
+  .orgc-partners{grid-template-columns:repeat(5,1fr);max-width:none;}
+  .orgc-partners .orgc-h,.orgc-bar::before{display:none;}
+  .orgc-bar{height:200px;}
+  .org-tables{grid-template-columns:1fr;gap:36px;}
+}
+
+/* ---------- 조직도 협력기관: 가로 타일 (최종) ---------- */
+.orgc-partners{position:relative;display:grid;grid-template-columns:repeat(5,1fr);gap:12px;padding-top:0;width:100%;max-width:900px;}
+.orgc-partners .orgc-h{display:none;}
+.orgc-tile{font-family:var(--round);background:#EFC46A;color:#fff;font-weight:normal;font-size:14px;line-height:1.4;text-align:center;
+  border-radius:10px;min-height:72px;display:flex;align-items:center;justify-content:center;padding:10px 12px;
+  word-break:keep-all;}
+@media (max-width:860px){.orgc-partners{grid-template-columns:repeat(2,1fr);}}
+
+/* ---------- 조직도 SVG ---------- */
+.orgc-svg{width:100%;max-width:760px;height:auto;display:block;margin:0 auto 14px;}
+
+/* ---------- 오시는 길 (지도 연동) ---------- */
+.loc{margin-bottom:10px;}
+.loc-grid2{display:grid;grid-template-columns:420px 1fr;gap:36px;align-items:start;}
+.loc-map{border-radius:8px;overflow:hidden;border:1px solid var(--hairline);}
+.loc-map iframe{display:block;}
+.loc-info{margin:0;}
+.loc-info dt{font-size:14.5px;font-weight:500;color:var(--ink);display:flex;align-items:center;gap:8px;margin-top:14px;}
+.loc-info dt:first-child{margin-top:4px;}
+.loc-info .ic{display:inline-flex;width:20px;height:20px;align-items:center;justify-content:center;font-size:12px;color:var(--olive-deep);background:var(--olive-pale);border-radius:4px;}
+.loc-info dd{margin:6px 0 0 28px;font-size:14px;color:#333;line-height:1.75;}
+@media (max-width:860px){.loc-grid2{grid-template-columns:1fr;}}
+
+/* ---------- 회색 배경 + 흰 패널 (주요사업 등) ---------- */
+.panel-wrap{background:#F2F2F2;padding:34px 0 60px;}
+.panel-title{font-family:var(--round);font-size:24px;color:#7A9C33;font-weight:normal;margin:0 0 18px;}
+.panel{background:#fff;padding:34px 40px 30px;}
+.panel-sub{font-size:19px;font-weight:700;margin:0 0 22px;}
+.dot-list{list-style:none;padding:0;margin:0;}
+.dot-list li{position:relative;padding:14px 0 14px 26px;font-size:15px;border-bottom:1.5px dashed #444;margin:0;}
+.dot-list li:last-child{border-bottom:none;}
+.dot-list li::before{content:"";position:absolute;left:4px;top:22px;width:10px;height:10px;border-radius:50%;}
+.dot-list li.d-g::before{background:#C8DCA0;}
+.dot-list li.d-s::before{background:#F1C9B4;}
+.dot-list li.d-y::before{background:#E9D890;}
+@media (max-width:720px){.panel{padding:24px 20px;}}
+
+/* ---------- 자격검정 상세 (패널형) ---------- */
+.cert-panel p{font-size:14px;line-height:1.85;max-width:none;margin:0 0 18px;}
+.cert-title{font-size:22px;font-weight:700;margin:0 0 20px;}
+.cert-sub{font-size:14px;margin-bottom:18px !important;}
+.cert-level{margin-top:22px;}
+.cert-level-title{font-weight:600;margin:0 0 2px !important;}
+
+/* ---------- 협력기관 (원본형) ---------- */
+.partner2{display:grid;grid-template-columns:300px 1fr;gap:40px;padding:36px 20px;border-bottom:1.5px dashed #444;align-items:start;}
+.partner2:last-child{border-bottom:none;}
+.logo2{display:flex;align-items:center;justify-content:center;min-height:110px;}
+.logo2 img{max-width:300px;max-height:110px;width:auto;object-fit:contain;}
+.logo-fallback{display:none;align-items:center;justify-content:center;width:100%;min-height:90px;background:var(--olive-pale);border-radius:8px;font-weight:700;color:var(--olive-deep);font-size:15px;text-align:center;padding:10px;}
+.partner2-body h3{font-size:17px;font-weight:500;margin:0 0 16px;}
+.partner2-body p{font-size:15px;line-height:1.8;max-width:none;margin:0 0 26px;}
+.go-btn{display:inline-block;background:#B9CF8A;color:#fff;font-size:14px;letter-spacing:.06em;padding:12px 56px;border-radius:999px;}
+.go-btn:hover{background:#A6BF75;}
+@media (max-width:860px){.partner2{grid-template-columns:1fr;gap:20px;padding:26px 8px;}.logo2{min-height:0;}}
+
+/* ---------- 공지사항 ---------- */
+.notice-list{list-style:none;padding:0;margin:0;}
+.notice-list li{margin:0;border-bottom:1.5px dashed #444;}
+.notice-list li:last-child{border-bottom:none;}
+.notice-list a{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:16px 8px;}
+.notice-list a:hover .notice-list-title{color:var(--olive-deep);}
+.notice-list-title{font-size:15.5px;font-weight:500;}
+.notice-list-date{font-size:13.5px;color:var(--muted);flex:none;}
+.notice-empty{color:var(--muted);text-align:center;padding:30px 0;margin:0;}
+.notice-title{font-size:22px;font-weight:700;margin:0 0 6px;}
+.notice-meta{font-size:13.5px;color:var(--muted);margin:0 0 24px;padding-bottom:18px;border-bottom:1.5px dashed #444;}
+.notice-body{font-size:15px;line-height:1.85;}
+.notice-body p{max-width:none;}
+.notice-body img{border-radius:8px;margin:10px 0;}
+.notice-back{margin:30px 0 0;padding-top:18px;border-top:1px solid var(--hairline);}
+.notice-back a{color:var(--olive-deep);font-weight:700;font-size:14px;}
+
+/* ---------- 모바일 최적화 보완 ---------- */
+@media (max-width:860px){
+  .site-header .wrap{flex-direction:row;justify-content:space-between;align-items:center;padding:14px 16px;}
+  .brand{font-size:19px;gap:8px;}
+  .brand img{height:44px;}
+  .nav-toggle{position:static;flex:none;padding:8px 12px;font-size:14px;}
+  .feature-band .wrap{grid-template-columns:repeat(2,1fr);}
+  .feature{padding:22px 10px 20px;}
+  .feature h3{font-size:19px;}
+  .feature:nth-child(2){border-right:none;}
+  .feature:nth-child(1),.feature:nth-child(2){border-bottom:1px solid rgba(255,255,255,.55);}
+  .feature:nth-child(3){border-right:1px solid rgba(255,255,255,.55);}
+  .cert-list{grid-template-columns:repeat(2,1fr);gap:12px;}
+  .cert-list .icon-wrap{width:84px;height:84px;}
+  .cert-list .icon-wrap img{width:72px;height:72px;}
+  .cert-list h3{font-size:14px;}
+  .panel{padding:22px 16px;}
+  .partner2{padding:22px 4px;}
+  .go-btn{padding:10px 40px;}
+  .purpose-banner{padding:22px 20px;border-radius:20px;}
+  .purpose-banner h1{font-size:20px;}
+  .purpose-banner p{font-size:14.5px;}
+  .profile-body h1{font-size:26px;}
+  .profile-sec li{font-size:15px;padding-left:30px;}
+  .org-table{font-size:12.5px;}
+  .org-table th,.org-table td{padding:6px 6px;}
+  .cert-title{font-size:18px;}
+  .loc-map iframe{height:280px;}
+  .footer-meta{font-size:12px;}
+  .footer-links{gap:24px;}
+}
+@media (max-width:360px){
+  .brand{font-size:17px;}
+  .brand img{height:38px;}
+  .feature-band .wrap{grid-template-columns:1fr;}
+  .feature{border-right:none !important;border-bottom:1px solid rgba(255,255,255,.55);}
+}
+
+/* ---------- 모바일 컴팩트 (가독성 우선) ---------- */
+@media (max-width:860px){
+  body{font-size:14.5px;line-height:1.65;}
+  .site-header .wrap{padding:10px 14px;}
+  .brand{font-size:17px;gap:7px;}
+  .brand img{height:36px;}
+  .nav-toggle{padding:6px 10px;font-size:13px;}
+  .main-nav > ul > li > a{padding:11px 20px;font-size:14px;}
+  .main-nav .submenu li a{padding:7px 12px;font-size:13px;}
+
+  /* 홈 */
+  .hero img{max-height:260px;}
+  .feature-band .wrap{grid-template-columns:repeat(4,1fr);}
+  .feature{padding:14px 4px 12px;border-right:1px solid rgba(255,255,255,.55) !important;border-bottom:none !important;}
+  .feature:last-child{border-right:none !important;}
+  .feature .icon{width:34px;height:34px;margin-bottom:8px;}
+  .feature .icon img{width:18px;height:18px;}
+  .feature h3{font-size:14px;margin-bottom:4px;}
+  .feature a.more{font-size:11px;letter-spacing:.02em;}
+
+  /* 공통 */
+  main{padding:24px 0 48px;}
+  .wrap{padding:0 16px;}
+  .page-hero{padding:22px 16px 16px;}
+  .page-hero h1{font-size:20px;}
+  .subnav .wrap{padding-top:10px;padding-bottom:10px;}
+  .crumb{font-size:12px;margin-bottom:6px;}
+  .sib-list{gap:6px;}
+  .sib-list a{padding:4px 10px;font-size:12px;}
+  .prose h2{font-size:17px;margin-top:1.6em;}
+  .prose h3{font-size:15px;}
+  p{font-size:14.5px;}
+  .panel-wrap{padding:20px 0 40px;}
+  .panel-title{font-size:19px;margin-bottom:12px;}
+  .panel{padding:18px 14px;}
+  .panel-sub{font-size:15px;margin-bottom:12px;}
+  .dot-list li{font-size:13.5px;padding:10px 0 10px 22px;}
+  .dot-list li::before{top:17px;width:8px;height:8px;}
+
+  /* 소개 */
+  .name-card{padding:20px 16px;}
+  .name-card img{width:40px;}
+  .name-card-title{font-size:15px;}
+
+  /* 설립목적 */
+  .purpose-banner{padding:16px 16px;border-radius:16px;margin-bottom:18px;}
+  .purpose-banner h1{font-size:17px;margin-bottom:8px;}
+  .purpose-banner p{font-size:13.5px;line-height:1.7;}
+  .purpose-fallback{gap:8px;}
+  .purpose-fallback li{padding:10px 12px;font-size:13.5px;}
+
+  /* 이사장 프로필 */
+  .profile-wrap{padding:22px 0 40px;}
+  .profile-tabs{gap:8px;margin-bottom:22px;grid-template-columns:1fr 1fr;}
+  .profile-tabs a{font-size:13.5px;padding:12px 8px;letter-spacing:.04em;}
+  .profile-body h1{font-size:22px;margin-bottom:18px;}
+  .profile-sec h3{font-size:16px;gap:10px;margin-bottom:10px;}
+  .profile-sec li{font-size:13.5px;padding-left:24px;margin-bottom:6px;line-height:1.6;}
+  .profile-sec li::before{left:4px;}
+  hr.dashed{margin:22px 0 24px;}
+
+  /* 연혁 */
+  .timeline{padding-left:22px;}
+  .timeline .year{padding-bottom:20px;}
+  .timeline .year::before{left:-30px;width:12px;height:12px;}
+  .timeline .year h3{font-size:15px;}
+  .timeline li{font-size:13.5px;}
+
+  /* 조직 */
+  .orgc{margin:10px 0 30px;}
+  .orgc-partners{gap:8px;}
+  .orgc-tile{min-height:52px;font-size:12.5px;padding:8px 8px;border-radius:8px;}
+  .org-tables{gap:24px;margin-top:10px;}
+  .dot-title{font-size:15px;margin-bottom:12px;}
+  .org-table{font-size:12px;}
+  .org-table th,.org-table td{padding:5px 4px;}
+
+  /* 오시는 길 */
+  .loc-grid2{gap:16px;}
+  .loc-map iframe{height:220px;}
+  .loc-info dt{font-size:13.5px;margin-top:10px;}
+  .loc-info dd{font-size:13px;margin-left:24px;line-height:1.6;}
+
+  /* 자격검정 */
+  .cert-list{gap:8px;margin:14px 0;grid-template-columns:repeat(3,1fr);}
+  .cert-list a{padding:12px 6px;gap:8px;border-radius:10px;}
+  .cert-list .icon-wrap{width:56px;height:56px;}
+  .cert-list .icon-wrap img{width:50px;height:50px;}
+  .cert-list h3{font-size:12px;line-height:1.3;word-break:break-all;padding:0 2px;}
+  .cert-title{font-size:16px;margin-bottom:12px;}
+  .cert-sub{font-size:13px;}
+  .cert-panel p{font-size:13.5px;line-height:1.75;margin-bottom:12px;}
+  .cert-level{margin-top:14px;}
+
+  /* 협력기관 */
+  .partner2{gap:12px;padding:18px 2px;}
+  .logo2 img{max-height:64px;max-width:220px;}
+  .partner2-body h3{font-size:15px;margin-bottom:8px;}
+  .partner2-body p{font-size:13.5px;line-height:1.7;margin-bottom:14px;}
+  .go-btn{padding:8px 30px;font-size:13px;}
+
+  /* 공지 */
+  .notice-list a{padding:12px 4px;flex-direction:column;align-items:flex-start;gap:4px;}
+  .notice-list-title{font-size:14px;}
+  .notice-list-date{font-size:12px;}
+  .notice-title{font-size:17px;}
+  .notice-body{font-size:14px;}
+
+  /* 푸터 */
+  .site-footer .wrap{padding:18px 16px 20px;}
+  .footer-links{gap:18px;margin-bottom:10px;}
+  .footer-links a{font-size:12px;}
+  .footer-meta{font-size:11px;line-height:1.7;}
+  .footer-credit{font-size:10.5px;margin-top:4px;}
+}
+@media (max-width:360px){
+  .brand{font-size:15.5px;}
+  .brand img{height:32px;}
+  .feature h3{font-size:13px;}
+  .cert-list{grid-template-columns:repeat(2,1fr);}
+}
+
+/* ---------- 모바일 홈 재구성 ---------- */
+.hero-mo{display:none;}
+@media (max-width:860px){
+  .hero-pc{display:none;}
+  .hero-mo{display:block;width:100%;max-height:none;height:auto;}
+  .feature-band .wrap{grid-template-columns:repeat(2,1fr);}
+  .feature{padding:20px 8px 16px;border-right:1px solid rgba(255,255,255,.55) !important;border-bottom:1px solid rgba(255,255,255,.55) !important;}
+  .feature:nth-child(2n){border-right:none !important;}
+  .feature:nth-child(3),.feature:nth-child(4){border-bottom:none !important;}
+  .feature .icon{width:44px;height:44px;margin-bottom:10px;}
+  .feature .icon img{width:22px;height:22px;}
+  .feature h3{font-size:16px;margin-bottom:6px;}
+  .feature a.more{font-size:12px;}
+  .site-footer .wrap{padding:16px 16px 18px;}
+  .footer-links{gap:16px;margin-bottom:8px;}
+  .footer-links a{font-size:12px;}
+  .footer-meta{font-size:10.5px;line-height:1.6;opacity:.95;}
+  .footer-credit{font-size:9.5px;margin-top:3px;opacity:.8;}
+}
+
+/* ---------- 모바일 안내띠: 한 줄 4칸, 낮게 ---------- */
+@media (max-width:860px){
+  .feature-band .wrap{grid-template-columns:repeat(4,1fr);}
+  .feature{padding:12px 4px 10px;border-bottom:none !important;border-right:1px solid rgba(255,255,255,.55) !important;}
+  .feature:last-child{border-right:none !important;}
+  .feature .icon{width:30px;height:30px;margin-bottom:6px;}
+  .feature .icon img{width:16px;height:16px;}
+  .feature h3{font-size:13.5px;margin-bottom:2px;}
+  .feature a.more{font-size:10.5px;}
+}
+
+/* ---------- 모바일 안내띠 아이콘 축소 ---------- */
+@media (max-width:860px){
+  .feature .icon{width:22px;height:22px;margin-bottom:5px;}
+  .feature .icon img{width:12px;height:12px;}
+  .feature{padding:10px 4px 9px;}
+}
+.logo2 img[src$="semirae.png"]{max-height:80px;}

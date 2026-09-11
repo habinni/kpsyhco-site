@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120" width="360" height="120">
+  <path d="M14 26h54a24 24 0 010 48H14z" fill="#2E4A6B"/>
+  <path d="M14 26l34 12v60l-34-8z" fill="#F0A493"/>
+  <circle cx="42" cy="66" r="3" fill="#2E4A6B"/>
+  <text x="215" y="66" text-anchor="middle" font-family="Pretendard Variable,Pretendard,sans-serif" font-weight="800" font-size="34" fill="#2E4A6B">(주)플리마인드</text>
+  <text x="215" y="100" text-anchor="middle" font-family="Pretendard Variable,Pretendard,sans-serif" font-size="14" letter-spacing="3" fill="#2E4A6B">play in your mind</text>
+</svg>
